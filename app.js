@@ -25,7 +25,7 @@ function wishMe() {
 }
 
 window.addEventListener('load', () => {
-    speak("Initializing JARVIS...");
+    speak("Iniciando JARVIS...");
     wishMe();
 });
 
@@ -45,17 +45,17 @@ btn.addEventListener('click', () => {
 });
 
 function takeCommand(message) {
-    if (message.includes('hey') || message.includes('hello')) {
-        speak("Hello Sir, How May I Help You?");
+    if (message.includes('hey') || message.includes('olá jarvis')) {
+        speak("Sou a Assistente Virtual JARVIS. Como posso ajudar você?");
     } else if (message.includes("open google")) {
         window.open("https://google.com", "_blank");
-        speak("Opening Google...");
+        speak("Abrir Google...");
     } else if (message.includes("open youtube")) {
         window.open("https://youtube.com", "_blank");
-        speak("Opening Youtube...");
+        speak("Abrir Youtube...");
     } else if (message.includes("open facebook")) {
         window.open("https://facebook.com", "_blank");
-        speak("Opening Facebook...");
+        speak("Abrir Facebook...");
     } else if (message.includes('what is') || message.includes('who is') || message.includes('what are')) {
         window.open(`https://www.google.com/search?q=${message.replace(" ", "+")}`, "_blank");
         const finalText = "This is what I found on the internet regarding " + message;
